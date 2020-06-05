@@ -30,6 +30,7 @@
 		52CC13A9248AC0CD00D7D523 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC13A8248AC0CD00D7D523 /* TableViewCell.swift */; };
 		52CC13AB248AC24E00D7D523 /* UILabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC13AA248AC24E00D7D523 /* UILabelFactory.swift */; };
 		52CC13AD248ACC8E00D7D523 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC13AC248ACC8E00D7D523 /* UITableView.swift */; };
+		52CC13AF248AD68E00D7D523 /* SearchBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC13AE248AD68E00D7D523 /* SearchBuilder.swift */; };
 		79BDBD5F208C5E74EF5E1CB9 /* Pods_LookAround.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17158A745D49F5871FA7F2B4 /* Pods_LookAround.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		52CC13A8248AC0CD00D7D523 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		52CC13AA248AC24E00D7D523 /* UILabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabelFactory.swift; sourceTree = "<group>"; };
 		52CC13AC248ACC8E00D7D523 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		52CC13AE248AD68E00D7D523 /* SearchBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBuilder.swift; sourceTree = "<group>"; };
 		9940A459FDED3DD7BA488979 /* Pods_LookAroundTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LookAroundTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C7950111FEAB7EAAA2B8FB0 /* Pods-LookAroundTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LookAroundTests.debug.xcconfig"; path = "Target Support Files/Pods-LookAroundTests/Pods-LookAroundTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C5A4CD766295B92D018FC0D7 /* Pods-LookAroundTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LookAroundTests.release.xcconfig"; path = "Target Support Files/Pods-LookAroundTests/Pods-LookAroundTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				52CC138C248A7E2100D7D523 /* SearchPresenter.swift */,
 				52CC138E248A7E4000D7D523 /* SearchInteractor.swift */,
 				52CC1390248A7E6000D7D523 /* SearchRouter.swift */,
+				52CC13AE248AD68E00D7D523 /* SearchBuilder.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				52CC13A6248ABD6900D7D523 /* UITableViewFactorcy.swift in Sources */,
 				52CC138F248A7E4000D7D523 /* SearchInteractor.swift in Sources */,
 				52CC1394248A813200D7D523 /* UINavigationControllerFactory.swift in Sources */,
+				52CC13AF248AD68E00D7D523 /* SearchBuilder.swift in Sources */,
 				52CC139B248A8FE400D7D523 /* UIViewContoller.swift in Sources */,
 				52CC13A0248AB51F00D7D523 /* PlaceResponseModel.swift in Sources */,
 				52CC13AB248AC24E00D7D523 /* UILabelFactory.swift in Sources */,

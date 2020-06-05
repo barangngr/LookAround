@@ -6,17 +6,26 @@
 //  Copyright © 2020 Baran Gungor. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-//    func getPlace() {
-//        service.request(.getSearch(title: "şükrüsaraç")) { (result) in
-//            switch result {
-//            case .success(let response):
-//                print(response.statusCode)
-//                let jsonDict = try? JSONSerialization.jsonObject(with: response.data, options: .mutableContainers)
-//                print("json == \(jsonDict)")
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
-//    }
+class SearchInteractor: SearchInteractorProtocol {
+    
+    var delegete: SearchInteractorDelegate?
+    
+    
+    func getSearchPlace() {
+        service.request(.getSearch(title: "şükrüsaraç")) { (result) in
+            switch result {
+            case .success(let response):
+                print(response.statusCode)
+                let jsonDict = try? JSONSerialization.jsonObject(with: response.data, options: .mutableContainers)
+                print("json == \(jsonDict)")
+                self.delegete?.handleOutput(.showPlaces(data: ["baran"]))
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+}
+

@@ -6,4 +6,24 @@
 //  Copyright © 2020 Baran Gungor. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class SearchRouter {
+    unowned let viewController: UIViewController
+    
+    init(viewController: UIViewController) {
+        self.viewController = viewController
+    }
+}
+
+// MARK: SearchRouterProtocol
+extension SearchRouter: SearchRouterProtocol {
+    
+    func navigate(to route: SearchRoute) {
+        switch route {
+        case .goOnMap:
+            print("gogogogogoo")
+        }
+    }
+    
+}

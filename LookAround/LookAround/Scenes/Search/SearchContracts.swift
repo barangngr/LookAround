@@ -6,36 +6,42 @@
 //  Copyright © 2020 Baran Gungor. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 // MARK: View
-protocol CWFeedViewProtocol: class {
-    func handleOutput(_ output: CWFeedPresenterOutPut)
+protocol SearchViewProtocol: class {
+    func handleOutput(_ output: SearchPresenterOutPut)
 }
 
 // MARK: - Presenter
-protocol CWFeedPresenterProtocol {
-  
+protocol SearchPresenterProtocol {
+    func load()
 }
 
-enum CWFeedPresenterOutPut {
-    
+enum SearchPresenterOutPut {
+    case showPlaces(data: [String])
 }
 
 // MARK: - Interactor
-protocol CWFeedInteractorProtocol {
-   
+protocol SearchInteractorDelegate: class {
+    func handleOutput(_ output: SearchInteractorOutput)
+}
+
+enum SearchInteractorOutput {
+    case showPlaces(data: [String])
+}
+
+protocol SearchInteractorProtocol {
+    var delegete: SearchInteractorDelegate? { get set }
+    
+    func getSearchPlace()
 }
 
 // MARK: - Router
-protocol CWFeedRouterProtocol {
-    func navigate(to route: CWFeedRoute)
+protocol SearchRouterProtocol {
+    func navigate(to route: SearchRoute)
 }
 
-enum CWFeedRoute {
+enum SearchRoute {
     case goOnMap
-}
-
-protocol CWMediaViewerDelegate: class {
-    
 }

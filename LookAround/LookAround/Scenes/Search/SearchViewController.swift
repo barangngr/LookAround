@@ -14,11 +14,14 @@ class SearchViewController: UIViewController {
     private let searchBar = UISearchBarFactory(style: .base).build()
     private let tableView = UITableViewFactorcy(style: .base).build()
     
-    var array: [String] = ["123"]
+    var array: [String] = []
+    var presenter: SearchPresenter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+        
+        presenter.load()
     }
     
     func configure() {
@@ -80,6 +83,19 @@ extension SearchViewController: UITableViewDataSource {
         cell.descrpLabel.text = "dalnkadskldndalnkadskldndalnkadskldndalnkadskldndalnkadskldn"
         cell.selectionStyle = .none
         return cell
+    }
+    
+}
+
+// MARK: SearchViewProtocol
+extension SearchViewController: SearchViewProtocol {
+    
+    func handleOutput(_ output: SearchPresenterOutPut) {
+        switch output {
+        case .showPlaces(let data):
+            array = data
+            tableView.reloadData()
+        }
     }
     
 }
