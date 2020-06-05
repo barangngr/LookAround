@@ -9,12 +9,18 @@
 import UIKit
 
 class SearchViewController: UIViewController {
+    
+    private let searchBar = UISearchBarFactory(style: .base).build()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .gray
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .cusBlack
+        
+        setConstraint()
     }
 
+    func setConstraint() {
+        view.addSubview(searchBar)
+    }
 
 }
