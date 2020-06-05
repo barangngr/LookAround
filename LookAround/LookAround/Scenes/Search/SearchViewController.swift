@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class SearchViewController: UIViewController {
     
@@ -21,6 +22,10 @@ class SearchViewController: UIViewController {
 
     func setConstraint() {
         view.addSubview(searchBar)
+        searchBar.snp.makeConstraints { (make) in
+            make.left.right.equalTo(self.view)
+            make.top.equalTo(self.view.safeAreaLayoutGuide)
+        }
     }
 
 }
