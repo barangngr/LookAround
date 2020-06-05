@@ -9,6 +9,8 @@ target 'LookAround' do
 
   pod 'SnapKit'
   pod 'Moya'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
 
   target 'LookAroundTests' do
     inherit! :search_paths

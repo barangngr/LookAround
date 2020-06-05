@@ -294,6 +294,7 @@
 				52CC1357248A741200D7D523 /* Frameworks */,
 				52CC1358248A741200D7D523 /* Resources */,
 				B1D52BCD1EF897317B0B80F1 /* [CP] Embed Pods Frameworks */,
+				CEA91FBBB565EE6F5E7A04E1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -440,6 +441,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LookAround/Pods-LookAround-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEA91FBBB565EE6F5E7A04E1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LookAround/Pods-LookAround-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LookAround/Pods-LookAround-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LookAround/Pods-LookAround-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
