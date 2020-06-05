@@ -16,6 +16,7 @@ class SearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .cusBlack
+        hideKeyboard()
         
         setConstraint()
     }
@@ -26,6 +27,20 @@ class SearchViewController: UIViewController {
             make.left.right.equalTo(self.view)
             make.top.equalTo(self.view.safeAreaLayoutGuide)
         }
+        //getPlace()
     }
+    
+//    func getPlace() {
+//        service.request(.getSearch(title: "şükrüsaraç")) { (result) in
+//            switch result {
+//            case .success(let response):
+//                print(response.statusCode)
+//                let jsonDict = try? JSONSerialization.jsonObject(with: response.data, options: .mutableContainers)
+//                print("json == \(jsonDict)")
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
+//    }
 
 }

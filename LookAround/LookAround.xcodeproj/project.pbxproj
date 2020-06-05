@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,11 @@
 		52CC1394248A813200D7D523 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC1393248A813200D7D523 /* UINavigationController.swift */; };
 		52CC1397248A838600D7D523 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC1396248A838600D7D523 /* UIColor.swift */; };
 		52CC1399248A8A4C00D7D523 /* UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC1398248A8A4C00D7D523 /* UISearchBar.swift */; };
+		52CC139B248A8FE400D7D523 /* UIViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC139A248A8FE400D7D523 /* UIViewContoller.swift */; };
+		52CC139D248A92CC00D7D523 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC139C248A92CC00D7D523 /* WebService.swift */; };
+		52CC13A0248AB51F00D7D523 /* PlaceResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC139F248AB51F00D7D523 /* PlaceResponseModel.swift */; };
+		52CC13A2248AB63200D7D523 /* GeometryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC13A1248AB63200D7D523 /* GeometryResponse.swift */; };
+		52CC13A4248AB69000D7D523 /* ResultsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC13A3248AB69000D7D523 /* ResultsResponse.swift */; };
 		79BDBD5F208C5E74EF5E1CB9 /* Pods_LookAround.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17158A745D49F5871FA7F2B4 /* Pods_LookAround.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +60,11 @@
 		52CC1393248A813200D7D523 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		52CC1396248A838600D7D523 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		52CC1398248A8A4C00D7D523 /* UISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBar.swift; sourceTree = "<group>"; };
+		52CC139A248A8FE400D7D523 /* UIViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewContoller.swift; sourceTree = "<group>"; };
+		52CC139C248A92CC00D7D523 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		52CC139F248AB51F00D7D523 /* PlaceResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceResponseModel.swift; sourceTree = "<group>"; };
+		52CC13A1248AB63200D7D523 /* GeometryResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryResponse.swift; sourceTree = "<group>"; };
+		52CC13A3248AB69000D7D523 /* ResultsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsResponse.swift; sourceTree = "<group>"; };
 		9940A459FDED3DD7BA488979 /* Pods_LookAroundTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LookAroundTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C7950111FEAB7EAAA2B8FB0 /* Pods-LookAroundTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LookAroundTests.debug.xcconfig"; path = "Target Support Files/Pods-LookAroundTests/Pods-LookAroundTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C5A4CD766295B92D018FC0D7 /* Pods-LookAroundTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LookAroundTests.release.xcconfig"; path = "Target Support Files/Pods-LookAroundTests/Pods-LookAroundTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +116,7 @@
 				52CC1387248A78A700D7D523 /* App */,
 				52CC1385248A771000D7D523 /* Utils */,
 				52CC1384248A770700D7D523 /* Network */,
+				52CC139E248AB4D600D7D523 /* Models */,
 				52CC1386248A772400D7D523 /* Scenes */,
 				52CC1366248A741400D7D523 /* Assets.xcassets */,
 				52CC1368248A741400D7D523 /* LaunchScreen.storyboard */,
@@ -152,6 +163,7 @@
 		52CC1384248A770700D7D523 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				52CC139C248A92CC00D7D523 /* WebService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -197,8 +209,19 @@
 			isa = PBXGroup;
 			children = (
 				52CC1396248A838600D7D523 /* UIColor.swift */,
+				52CC139A248A8FE400D7D523 /* UIViewContoller.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		52CC139E248AB4D600D7D523 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52CC139F248AB51F00D7D523 /* PlaceResponseModel.swift */,
+				52CC13A3248AB69000D7D523 /* ResultsResponse.swift */,
+				52CC13A1248AB63200D7D523 /* GeometryResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		6B2489357DB34C01E50F9112 /* Pods */ = {
@@ -209,7 +232,6 @@
 				9C7950111FEAB7EAAA2B8FB0 /* Pods-LookAroundTests.debug.xcconfig */,
 				C5A4CD766295B92D018FC0D7 /* Pods-LookAroundTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -391,9 +413,14 @@
 			files = (
 				52CC138F248A7E4000D7D523 /* SearchInteractor.swift in Sources */,
 				52CC1394248A813200D7D523 /* UINavigationController.swift in Sources */,
+				52CC139B248A8FE400D7D523 /* UIViewContoller.swift in Sources */,
+				52CC13A0248AB51F00D7D523 /* PlaceResponseModel.swift in Sources */,
+				52CC13A2248AB63200D7D523 /* GeometryResponse.swift in Sources */,
 				52CC135E248A741200D7D523 /* AppDelegate.swift in Sources */,
 				52CC1389248A7A4A00D7D523 /* SearchViewController.swift in Sources */,
 				52CC1397248A838600D7D523 /* UIColor.swift in Sources */,
+				52CC13A4248AB69000D7D523 /* ResultsResponse.swift in Sources */,
+				52CC139D248A92CC00D7D523 /* WebService.swift in Sources */,
 				52CC1391248A7E6000D7D523 /* SearchRouter.swift in Sources */,
 				52CC138D248A7E2100D7D523 /* SearchPresenter.swift in Sources */,
 				52CC1360248A741200D7D523 /* SceneDelegate.swift in Sources */,
