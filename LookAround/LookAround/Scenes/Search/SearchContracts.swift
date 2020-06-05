@@ -16,6 +16,7 @@ protocol SearchViewProtocol: class {
 // MARK: - Presenter
 protocol SearchPresenterProtocol {
     func load()
+    func goMap()
 }
 
 enum SearchPresenterOutPut {

@@ -14,14 +14,23 @@ class SearchInteractor: SearchInteractorProtocol {
     
     
     func getSearchPlace() {
-        service.request(.getSearch(title: "şükrüsaraç")) { (result) in
+        service.request(.getSearch(title: "nurtepe")) { (result) in
             switch result {
             case .success(let response):
-                print(response.statusCode)
                 let jsonDict = try? JSONSerialization.jsonObject(with: response.data, options: .mutableContainers)
-                print("json == \(jsonDict)")
+                do {
+                    let json = try JSONDecoder().decode(PlaceResponseModel.self, from: response.data )
+                    //completionHandler(true, json)
+                    print(json)
+                } catch {
+                    print("Error during JSON serialization: \(error.localizedDescription)")
+                    //completionHandler(false, nil)
+                }
+                //let json = try? JSONDecoder().decode(PlaceResponseModel.self, from: response.data )
+                print(jsonDict)
                 self.delegete?.handleOutput(.showPlaces(data: ["baran"]))
             case .failure(let error):
+                //UIAlertViewHelper oluşturulup kullanılması daha uygun olurdu, ama bu case de ekstra işlem olmaması adına eklemedim.
                 print(error)
             }
         }

@@ -26,11 +26,15 @@ class SearchPresenter {
 
 // MARK: SearchPresenterProtocol
 extension SearchPresenter: SearchPresenterProtocol {
-    
+  
     func load() {
         interactor.getSearchPlace()
     }
-
+    
+    func goMap() {
+        router.navigate(to: .goOnMap)
+    }
+    
 }
 
 extension SearchPresenter: SearchInteractorDelegate {

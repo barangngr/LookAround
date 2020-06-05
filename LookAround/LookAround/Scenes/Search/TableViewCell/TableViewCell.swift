@@ -50,5 +50,10 @@ class TableViewCell: UITableViewCell {
         }
     }
     
+    func setCell(data: String){
+        headerLabel.text = data
+        descrpLabel.text = data
+    }
+    
     
 }

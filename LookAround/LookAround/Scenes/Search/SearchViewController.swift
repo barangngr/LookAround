@@ -61,6 +61,7 @@ extension SearchViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
+        presenter.goMap()
     }
     
 }
@@ -79,8 +80,7 @@ extension SearchViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
-        cell.headerLabel.text = "121231231231231231231231231231231231231231231233"
-        cell.descrpLabel.text = "dalnkadskldndalnkadskldndalnkadskldndalnkadskldndalnkadskldn"
+        cell.setCell(data: "sdömfçsldöçfçaö")
         cell.selectionStyle = .none
         return cell
     }

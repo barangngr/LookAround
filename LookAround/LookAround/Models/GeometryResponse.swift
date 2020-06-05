@@ -20,10 +20,10 @@ public struct LocationResponse: Codable {
 
 public struct GeometryResponse: Codable {
     
-    public var lat: String?
-    public var lng: String?
+    public var lat: Double?
+    public var lng: Double?
     
-    public init(lat: String?, lng: String?){
+    public init(lat: Double?, lng: Double?){
         self.lat = lat
         self.lng = lng
     }

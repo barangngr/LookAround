@@ -10,7 +10,6 @@ import Foundation
 
 public struct ResultsResponse: Codable {
     
-    public var formatted_address: String?
     public var geometry: LocationResponse?
     public var icon: String?
     public var id: String?
@@ -22,8 +21,7 @@ public struct ResultsResponse: Codable {
     public var types: [String]?
     public var vicinity: String?
     
-    public init(formatted_address: String?, geometry: LocationResponse?, icon: String?, id: String?, name: String?, opening_hours: OpeningResponse?, photos: [PhotosResponse]?, place_id: String?, reference: String?, types: [String]?, vicinity: String?){
-        self.formatted_address = formatted_address
+    public init(geometry: LocationResponse?, icon: String?, id: String?, name: String?, opening_hours: OpeningResponse?, photos: [PhotosResponse]?, place_id: String?, reference: String?, types: [String]?, vicinity: String?){
         self.geometry = geometry
         self.icon = icon
         self.id = id
