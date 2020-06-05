@@ -79,8 +79,10 @@
 		52CC135C248A741200D7D523 /* LookAround */ = {
 			isa = PBXGroup;
 			children = (
-				52CC135D248A741200D7D523 /* AppDelegate.swift */,
-				52CC135F248A741200D7D523 /* SceneDelegate.swift */,
+				52CC1387248A78A700D7D523 /* App */,
+				52CC1385248A771000D7D523 /* Utils */,
+				52CC1384248A770700D7D523 /* Network */,
+				52CC1386248A772400D7D523 /* Scenes */,
 				52CC1361248A741200D7D523 /* ViewController.swift */,
 				52CC1363248A741200D7D523 /* Main.storyboard */,
 				52CC1366248A741400D7D523 /* Assets.xcassets */,
@@ -97,6 +99,60 @@
 				52CC1376248A741500D7D523 /* Info.plist */,
 			);
 			path = LookAroundTests;
+			sourceTree = "<group>";
+		};
+		52CC137F248A764400D7D523 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		52CC1382248A764E00D7D523 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		52CC1383248A765A00D7D523 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		52CC1384248A770700D7D523 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		52CC1385248A771000D7D523 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		52CC1386248A772400D7D523 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				52CC137F248A764400D7D523 /* Search */,
+				52CC1382248A764E00D7D523 /* Map */,
+				52CC1383248A765A00D7D523 /* Detail */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		52CC1387248A78A700D7D523 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				52CC135D248A741200D7D523 /* AppDelegate.swift */,
+				52CC135F248A741200D7D523 /* SceneDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
