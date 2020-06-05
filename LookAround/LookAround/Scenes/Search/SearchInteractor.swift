@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+//    func getPlace() {
+//        service.request(.getSearch(title: "şükrüsaraç")) { (result) in
+//            switch result {
+//            case .success(let response):
+//                print(response.statusCode)
+//                let jsonDict = try? JSONSerialization.jsonObject(with: response.data, options: .mutableContainers)
+//                print("json == \(jsonDict)")
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
+//    }

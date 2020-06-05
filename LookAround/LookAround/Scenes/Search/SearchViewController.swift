@@ -12,35 +12,74 @@ import SnapKit
 class SearchViewController: UIViewController {
     
     private let searchBar = UISearchBarFactory(style: .base).build()
+    private let tableView = UITableViewFactorcy(style: .base).build()
+    
+    var array: [String] = ["123"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .cusBlack
+        configure()
+    }
+    
+    func configure() {
+        addSubViews()
+        setConstraints()
+        setTableView()
         hideKeyboard()
-        
-        setConstraint()
     }
 
-    func setConstraint() {
+    func addSubViews() {
         view.addSubview(searchBar)
+        view.addSubview(tableView)
+    }
+    
+    func setConstraints() {
         searchBar.snp.makeConstraints { (make) in
             make.left.right.equalTo(self.view)
             make.top.equalTo(self.view.safeAreaLayoutGuide)
         }
-        //getPlace()
+        
+        tableView.snp.makeConstraints { (make) in
+            make.left.right.bottom.equalTo(self.view)
+            make.top.equalTo(searchBar).offset(55)
+        }
     }
     
-//    func getPlace() {
-//        service.request(.getSearch(title: "şükrüsaraç")) { (result) in
-//            switch result {
-//            case .success(let response):
-//                print(response.statusCode)
-//                let jsonDict = try? JSONSerialization.jsonObject(with: response.data, options: .mutableContainers)
-//                print("json == \(jsonDict)")
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
-//    }
+    func setTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(TableViewCell.self, forCellReuseIdentifier: "cell")
+    }
+    
+}
 
+// MARK: - TableViewDelegete
+extension SearchViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
+    }
+    
+}
+
+// MARK: - TableViewDataSource
+extension SearchViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if array.count == 0 {
+            tableView.setEmptyView(title: "Your around look like empty", message: "Lets search")
+        } else {
+            tableView.restore()
+        }
+        return array.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
+        cell.headerLabel.text = "121231231231231231231231231231231231231231231233"
+        cell.descrpLabel.text = "dalnkadskldndalnkadskldndalnkadskldndalnkadskldndalnkadskldn"
+        cell.selectionStyle = .none
+        return cell
+    }
+    
 }
