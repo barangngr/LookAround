@@ -27,7 +27,7 @@ class SearchInteractor: SearchInteractorProtocol {
                     //completionHandler(false, nil)
                 }
                 //let json = try? JSONDecoder().decode(PlaceResponseModel.self, from: response.data )
-                print(jsonDict)
+                print(jsonDict ?? "no data")
                 self.delegete?.handleOutput(.showPlaces(data: ["baran"]))
             case .failure(let error):
                 //UIAlertViewHelper oluşturulup kullanılması daha uygun olurdu, ama bu case de ekstra işlem olmaması adına eklemedim.

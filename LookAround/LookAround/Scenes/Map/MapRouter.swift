@@ -1,5 +1,5 @@
 //
-//  SearchRouter.swift
+//  MapRouter.swift
 //  LookAround
 //
 //  Created by Baran on 5.06.2020.
@@ -8,23 +8,25 @@
 
 import UIKit
 
-class SearchRouter {
+class MapRouter {
+    
     unowned let viewController: UIViewController
     
     init(viewController: UIViewController) {
         self.viewController = viewController
     }
+    
 }
 
-// MARK: SearchRouterProtocol
-extension SearchRouter: SearchRouterProtocol {
+// MARK: MapRouterProtocol
+extension MapRouter: MapRouterProtocol {
     
-    func navigate(to route: SearchRoute) {
+    func navigate(to route: MapRoute) {
         switch route {
         case .goOnMap:
-            let mapView = MapBuilder.make()
-            viewController.navigationController?.pushViewController(mapView, animated: true)
+            print("gogogogogoo")
         }
     }
     
 }
+
