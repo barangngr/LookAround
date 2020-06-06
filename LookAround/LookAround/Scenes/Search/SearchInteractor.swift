@@ -13,8 +13,8 @@ class SearchInteractor: SearchInteractorProtocol {
     var delegete: SearchInteractorDelegate?
     var resultsArray: [Dictionary<String, AnyObject>] = Array()
     
-    func getSearchPlace() {
-        service.request(.getSearch(title: "canoe")) { (result) in
+    func getSearchPlace(text: String) {
+        service.request(.getSearch(title: text)) { (result) in
             switch result {
             case .success(let response):
                 let jsonDict = try? JSONSerialization.jsonObject(with: response.data, options: .mutableContainers)
@@ -25,7 +25,6 @@ class SearchInteractor: SearchInteractorProtocol {
                         self.resultsArray.removeAll()
                         for dct in result {
                             self.resultsArray.append(dct)
-                            print(dct)
                         }
                     }
                 }

@@ -17,6 +17,7 @@ protocol SearchViewProtocol: class {
 protocol SearchPresenterProtocol {
     func load()
     func goMap(selected: MapInfoModel)
+    func goSearch(text: String)
 }
 
 enum SearchPresenterOutPut {
@@ -34,8 +35,7 @@ enum SearchInteractorOutput {
 
 protocol SearchInteractorProtocol {
     var delegete: SearchInteractorDelegate? { get set }
-    
-    func getSearchPlace()
+    func getSearchPlace(text: String)
 }
 
 // MARK: - Router

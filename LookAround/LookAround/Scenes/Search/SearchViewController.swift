@@ -27,7 +27,7 @@ class SearchViewController: UIViewController {
     func configure() {
         addSubViews()
         setConstraints()
-        setTableView()
+        setComponentsThings()
         hideKeyboard()
     }
 
@@ -48,10 +48,11 @@ class SearchViewController: UIViewController {
         }
     }
     
-    func setTableView() {
+    func setComponentsThings() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(TableViewCell.self, forCellReuseIdentifier: "cell")
+        searchBar.delegate = self
     }
     
 }
@@ -83,6 +84,15 @@ extension SearchViewController: UITableViewDataSource {
         cell.setCell(data: resultArray[indexPath.row])
         cell.selectionStyle = .none
         return cell
+    }
+    
+}
+
+// MARK: UISearchBarDelegate
+extension SearchViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        presenter.goSearch(text: searchBar.text ?? "")
     }
     
 }

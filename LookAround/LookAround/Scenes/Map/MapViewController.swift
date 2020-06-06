@@ -56,7 +56,6 @@ class MapViewController: UIViewController {
 extension MapViewController: MapViewProtocol {
     
     func handleOutput(_ output: MapPresenterOutPut) {
-        //print("123")
     }
     
 }

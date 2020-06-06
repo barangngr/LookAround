@@ -22,19 +22,6 @@ class SearchPresenter {
         self.interactor.delegete = self
     }
     
-}
-
-// MARK: SearchPresenterProtocol
-extension SearchPresenter: SearchPresenterProtocol {
-  
-    func load() {
-        interactor.getSearchPlace()
-    }
-    
-    func goMap(selected: MapInfoModel) {
-        router.navigate(to: .goOnMap(data: selected))
-    }
-    
     func parseDict(data: [Dictionary<String, AnyObject>]) -> [MapInfoModel] {
         var response = [MapInfoModel]()
         for dt in data {
@@ -61,6 +48,23 @@ extension SearchPresenter: SearchPresenterProtocol {
         return MapInfoModel(lat: latitude, lng: longitude, name: name, adress: adress, rating: rating, png: icon, isOpen: isOpen)
     }
     
+}
+
+// MARK: SearchPresenterProtocol
+extension SearchPresenter: SearchPresenterProtocol {
+     
+    func load() {
+        interactor.getSearchPlace(text: "")
+    }
+    
+    func goMap(selected: MapInfoModel) {
+        router.navigate(to: .goOnMap(data: selected))
+    }
+    
+    func goSearch(text: String) {
+        interactor.getSearchPlace(text: text)
+    }
+        
 }
 
 extension SearchPresenter: SearchInteractorDelegate {
