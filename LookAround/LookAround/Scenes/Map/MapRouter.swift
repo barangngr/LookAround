@@ -24,7 +24,8 @@ extension MapRouter: MapRouterProtocol {
     func navigate(to route: MapRoute) {
         switch route {
         case .goOnMap:
-            print("gogogogogoo")
+            let detailView = DetailViewController()
+            viewController.navigationController?.pushViewController(detailView, animated: true)
         }
     }
     

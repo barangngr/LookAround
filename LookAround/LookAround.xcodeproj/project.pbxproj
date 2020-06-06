@@ -36,6 +36,9 @@
 		52CC13B5248AE24E00D7D523 /* MapRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC13B4248AE24E00D7D523 /* MapRouter.swift */; };
 		52CC13B7248AE27600D7D523 /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC13B6248AE27600D7D523 /* MapPresenter.swift */; };
 		52CC13B9248AE30100D7D523 /* MapContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC13B8248AE30100D7D523 /* MapContracts.swift */; };
+		52CC13BB248BBC6700D7D523 /* DetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC13BA248BBC6700D7D523 /* DetailBuilder.swift */; };
+		52CC13BD248BBCA700D7D523 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC13BC248BBCA700D7D523 /* DetailViewController.swift */; };
+		52CC13BF248BBCC800D7D523 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC13BE248BBCC800D7D523 /* DetailPresenter.swift */; };
 		79BDBD5F208C5E74EF5E1CB9 /* Pods_LookAround.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17158A745D49F5871FA7F2B4 /* Pods_LookAround.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +88,9 @@
 		52CC13B4248AE24E00D7D523 /* MapRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRouter.swift; sourceTree = "<group>"; };
 		52CC13B6248AE27600D7D523 /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
 		52CC13B8248AE30100D7D523 /* MapContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapContracts.swift; sourceTree = "<group>"; };
+		52CC13BA248BBC6700D7D523 /* DetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBuilder.swift; sourceTree = "<group>"; };
+		52CC13BC248BBCA700D7D523 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		52CC13BE248BBCC800D7D523 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		9940A459FDED3DD7BA488979 /* Pods_LookAroundTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LookAroundTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C7950111FEAB7EAAA2B8FB0 /* Pods-LookAroundTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LookAroundTests.debug.xcconfig"; path = "Target Support Files/Pods-LookAroundTests/Pods-LookAroundTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C5A4CD766295B92D018FC0D7 /* Pods-LookAroundTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LookAroundTests.release.xcconfig"; path = "Target Support Files/Pods-LookAroundTests/Pods-LookAroundTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -183,6 +189,9 @@
 		52CC1383248A765A00D7D523 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				52CC13BC248BBCA700D7D523 /* DetailViewController.swift */,
+				52CC13BE248BBCC800D7D523 /* DetailPresenter.swift */,
+				52CC13BA248BBC6700D7D523 /* DetailBuilder.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -476,7 +485,9 @@
 				52CC13A0248AB51F00D7D523 /* PlaceResponseModel.swift in Sources */,
 				52CC13AB248AC24E00D7D523 /* UILabelFactory.swift in Sources */,
 				52CC13A2248AB63200D7D523 /* GeometryResponse.swift in Sources */,
+				52CC13BD248BBCA700D7D523 /* DetailViewController.swift in Sources */,
 				52CC135E248A741200D7D523 /* AppDelegate.swift in Sources */,
+				52CC13BB248BBC6700D7D523 /* DetailBuilder.swift in Sources */,
 				52CC1389248A7A4A00D7D523 /* SearchViewController.swift in Sources */,
 				52CC13B7248AE27600D7D523 /* MapPresenter.swift in Sources */,
 				52CC13B3248AE1ED00D7D523 /* MapBuilder.swift in Sources */,
@@ -484,6 +495,7 @@
 				52CC1397248A838600D7D523 /* UIColor.swift in Sources */,
 				52CC13AD248ACC8E00D7D523 /* UITableView.swift in Sources */,
 				52CC13A4248AB69000D7D523 /* ResultsResponse.swift in Sources */,
+				52CC13BF248BBCC800D7D523 /* DetailPresenter.swift in Sources */,
 				52CC13B1248AE1C500D7D523 /* MapViewController.swift in Sources */,
 				52CC139D248A92CC00D7D523 /* WebService.swift in Sources */,
 				52CC1391248A7E6000D7D523 /* SearchRouter.swift in Sources */,

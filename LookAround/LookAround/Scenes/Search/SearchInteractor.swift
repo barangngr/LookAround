@@ -14,7 +14,7 @@ class SearchInteractor: SearchInteractorProtocol {
     
     
     func getSearchPlace() {
-        service.request(.getSearch(title: "nurtepe")) { (result) in
+        service.request(.getSearch(title: "canoe")) { (result) in
             switch result {
             case .success(let response):
                 let jsonDict = try? JSONSerialization.jsonObject(with: response.data, options: .mutableContainers)
