@@ -15,7 +15,7 @@ class MapBuilder {
         let view = MapViewController()
         
         let router = MapRouter(viewController: view)
-        let presenter = MapPresenter(view: view, router: router)//MapPresenter(view: view, router: router)
+        let presenter = MapPresenter(view: view, router: router)
         
         view.presenter = presenter
         
