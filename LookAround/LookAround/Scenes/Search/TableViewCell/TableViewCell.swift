@@ -50,9 +50,9 @@ class TableViewCell: UITableViewCell {
         }
     }
     
-    func setCell(data: String){
-        headerLabel.text = data
-        descrpLabel.text = data
+    func setCell(data: MapInfoModel){
+        headerLabel.text = data.name
+        descrpLabel.text = data.adress
     }
     
     

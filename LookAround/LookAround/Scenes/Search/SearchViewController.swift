@@ -14,7 +14,7 @@ class SearchViewController: UIViewController {
     private let searchBar = UISearchBarFactory(style: .base).build()
     private let tableView = UITableViewFactorcy(style: .base).build()
     
-    var array: [String] = []
+    var resultArray = [MapInfoModel]()
     var presenter: SearchPresenter!
 
     override func viewDidLoad() {
@@ -60,7 +60,8 @@ class SearchViewController: UIViewController {
 extension SearchViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter.goMap()
+        let selected = resultArray[indexPath.row]
+        presenter.goMap(selected: selected)
     }
     
 }
@@ -69,17 +70,17 @@ extension SearchViewController: UITableViewDelegate {
 extension SearchViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if array.count == 0 {
+        if resultArray.count == 0 {
             tableView.setEmptyView(title: "Your around look like empty", message: "Lets search")
         } else {
             tableView.restore()
         }
-        return array.count
+        return resultArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! TableViewCell
-        cell.setCell(data: "sdömfçsldöçfçaö")
+        cell.setCell(data: resultArray[indexPath.row])
         cell.selectionStyle = .none
         return cell
     }
@@ -92,7 +93,7 @@ extension SearchViewController: SearchViewProtocol {
     func handleOutput(_ output: SearchPresenterOutPut) {
         switch output {
         case .showPlaces(let data):
-            array = data
+            resultArray = data
             tableView.reloadData()
         }
     }

@@ -10,7 +10,7 @@ import UIKit
 
 class MapBuilder {
     
-    static func make() -> MapViewController {
+    static func make(data: MapInfoModel) -> MapViewController {
         
         let view = MapViewController()
         
@@ -18,6 +18,7 @@ class MapBuilder {
         let presenter = MapPresenter(view: view, router: router)
         
         view.presenter = presenter
+        view.data = data
         
         return view
     }

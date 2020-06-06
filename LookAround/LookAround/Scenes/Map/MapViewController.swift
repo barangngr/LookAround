@@ -13,6 +13,7 @@ class MapViewController: UIViewController {
     
     var mapView: GMSMapView!
     var presenter: MapPresenter!
+    var data: MapInfoModel!
     let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
@@ -23,16 +24,16 @@ class MapViewController: UIViewController {
     }
     
     func configure() {
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 10)
+        let camera = GMSCameraPosition.camera(withLatitude: data.lat, longitude: data.lng, zoom: 10)
         mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
         mapView.delegate = self
         self.view.addSubview(mapView)
         
         // Creates a marker in the center of the map.
         let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
+        marker.position = CLLocationCoordinate2D(latitude: data.lat, longitude: data.lng)
+        marker.title = data.name
+        marker.snippet = data.adress
         marker.map = mapView
     }
     

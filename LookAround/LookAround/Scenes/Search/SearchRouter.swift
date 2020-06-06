@@ -21,8 +21,8 @@ extension SearchRouter: SearchRouterProtocol {
     
     func navigate(to route: SearchRoute) {
         switch route {
-        case .goOnMap:
-            let mapView = MapBuilder.make()
+        case let .goOnMap(data):
+            let mapView = MapBuilder.make(data: data)
             viewController.navigationController?.pushViewController(mapView, animated: true)
         }
     }

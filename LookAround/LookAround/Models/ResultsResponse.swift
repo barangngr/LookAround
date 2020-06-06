@@ -18,10 +18,10 @@ public struct ResultsResponse: Codable {
     public var photos: [PhotosResponse]?
     public var place_id: String?
     public var reference: String?
-    public var types: [String]?
+    public var types: [TypesResponse]?
     public var vicinity: String?
     
-    public init(geometry: LocationResponse?, icon: String?, id: String?, name: String?, opening_hours: OpeningResponse?, photos: [PhotosResponse]?, place_id: String?, reference: String?, types: [String]?, vicinity: String?){
+    public init(geometry: LocationResponse?, icon: String?, id: String?, name: String?, opening_hours: OpeningResponse?, photos: [PhotosResponse]?, place_id: String?, reference: String?, types: [TypesResponse]?, vicinity: String?){
         self.geometry = geometry
         self.icon = icon
         self.id = id

@@ -16,11 +16,11 @@ protocol SearchViewProtocol: class {
 // MARK: - Presenter
 protocol SearchPresenterProtocol {
     func load()
-    func goMap()
+    func goMap(selected: MapInfoModel)
 }
 
 enum SearchPresenterOutPut {
-    case showPlaces(data: [String])
+    case showPlaces(data: [MapInfoModel])
 }
 
 // MARK: - Interactor
@@ -29,7 +29,7 @@ protocol SearchInteractorDelegate: class {
 }
 
 enum SearchInteractorOutput {
-    case showPlaces(data: [String])
+    case showPlaces(data: [Dictionary<String, AnyObject>])
 }
 
 protocol SearchInteractorProtocol {
@@ -44,5 +44,5 @@ protocol SearchRouterProtocol {
 }
 
 enum SearchRoute {
-    case goOnMap
+    case goOnMap(data: MapInfoModel)
 }

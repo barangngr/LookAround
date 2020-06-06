@@ -32,12 +32,12 @@ public struct GeometryResponse: Codable {
 
 public struct PhotosResponse: Codable {
     
-    public var height: Int?
-    public var width: Int?
+    public var height: Double?
+    public var width: Double?
     public var photo_reference: String?
-    public var html_attributions: String?
+    public var html_attributions: [String]?
     
-    public init(height: Int?, width: Int?, photo_reference: String?, html_attributions: String?){
+    public init(height: Double?, width: Double?, photo_reference: String?, html_attributions: [String]?){
         self.height = height
         self.width = width
         self.photo_reference = photo_reference
@@ -52,6 +52,22 @@ public struct OpeningResponse: Codable {
     
     public init(open_now: Bool?){
         self.open_now = open_now
+    }
+    
+}
+
+public struct TypesResponse: Codable {
+    
+    public var height: String?
+    public var width: String?
+    public var photo_reference: String?
+    public var html_attributions: String?
+    
+    public init(height: String?, width: String?, photo_reference: String?, html_attributions: String?){
+        self.height = height
+        self.width = width
+        self.photo_reference = photo_reference
+        self.html_attributions = html_attributions
     }
     
 }

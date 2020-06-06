@@ -31,8 +31,34 @@ extension SearchPresenter: SearchPresenterProtocol {
         interactor.getSearchPlace()
     }
     
-    func goMap() {
-        router.navigate(to: .goOnMap)
+    func goMap(selected: MapInfoModel) {
+        router.navigate(to: .goOnMap(data: selected))
+    }
+    
+    func parseDict(data: [Dictionary<String, AnyObject>]) -> [MapInfoModel] {
+        var response = [MapInfoModel]()
+        for dt in data {
+            let newResponse = parseData(data: dt)
+            if newResponse != nil {
+                response.append(newResponse!)
+            }
+        }
+        return response
+    }
+    
+    func parseData(data: Dictionary<String, AnyObject>) -> MapInfoModel? {
+        guard let locationGeo = data["geometry"] as? Dictionary<String, AnyObject> else { return nil }
+        guard let location = locationGeo["location"] as? Dictionary<String, AnyObject> else { return nil }
+        guard let latitude = location["lat"] as? Double else { return nil }
+        guard let longitude = location["lng"] as? Double else { return nil }
+        guard let name = data["name"] as? String else { return nil }
+        guard let adress = data["formatted_address"] as? String else { return nil }
+        guard let rating = data["rating"] as? Double else { return nil }
+        guard let icon = data["icon"] as? String else { return nil }
+        guard let opening = data["opening_hours"] as? Dictionary<String, AnyObject> else { return nil }
+        guard let isOpen = opening["open_now"] as? Bool else { return nil }
+        
+        return MapInfoModel(lat: latitude, lng: longitude, name: name, adress: adress, rating: rating, png: icon, isOpen: isOpen)
     }
     
 }
@@ -42,7 +68,8 @@ extension SearchPresenter: SearchInteractorDelegate {
     func handleOutput(_ output: SearchInteractorOutput) {
         switch output {
         case .showPlaces(let data):
-            self.view?.handleOutput(.showPlaces(data: data))
+            let convertedData = parseDict(data: data)
+            self.view?.handleOutput(.showPlaces(data: convertedData))
         }
     }
     
