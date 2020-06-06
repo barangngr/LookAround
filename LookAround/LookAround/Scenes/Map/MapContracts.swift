@@ -15,6 +15,7 @@ protocol MapViewProtocol: class {
 
 // MARK: - Presenter
 protocol MapPresenterProtocol {
+    func goDetail()
 }
 
 enum MapPresenterOutPut {

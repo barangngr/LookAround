@@ -19,3 +19,12 @@ class MapPresenter {
     }
     
 }
+
+// MARK: MapPresenterProtocol
+extension MapPresenter: MapPresenterProtocol {
+    
+    func goDetail() {
+        router.navigate(to: .goOnMap)
+    }
+    
+}
