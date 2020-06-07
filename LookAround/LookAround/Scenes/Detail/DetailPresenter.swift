@@ -18,6 +18,7 @@ class DetailPresenter {
     }
     
     func convertData(incomingData: MapInfoModel) -> [DetailInfoModel] {
+        //Seçilen mekanın type image url'inide sahibiz, bu url kingfisher gibi thirdParty library'ler kullanılarak kullanıcıya gösterilebilir ama UI da daha düzgün bir tasarım yapmak gerekir ve bu challenge için ekstra pod eklemek istemedim.
         var array = [DetailInfoModel]()
         
         array.append(DetailInfoModel(header: headerData[0], descp: incomingData.name))
@@ -29,7 +30,6 @@ class DetailPresenter {
         
         return array
     }
-    
     
 }
 

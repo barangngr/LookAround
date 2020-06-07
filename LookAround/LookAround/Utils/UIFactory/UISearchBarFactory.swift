@@ -32,7 +32,7 @@ class UISearchBarFactory {
         searchBar.searchBarStyle = .default
         searchBar.barTintColor = .cusBlack
         searchBar.barStyle = .black
-        searchBar.placeholder = "Look"
+        searchBar.placeholder = "Where"
         searchBar.searchTextField.textColor = .white
     }
     

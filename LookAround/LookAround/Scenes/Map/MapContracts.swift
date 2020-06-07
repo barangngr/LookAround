@@ -21,18 +21,6 @@ protocol MapPresenterProtocol {
 enum MapPresenterOutPut {
 }
 
-// MARK: - Interactor
-protocol MapInteractorDelegate: class {
-    func handleOutput(_ output: MapInteractorOutput)
-}
-
-enum MapInteractorOutput {
-    case showPlaces(data: [String])
-}
-
-protocol MapInteractorProtocol {
-}
-
 // MARK: - Router
 protocol MapRouterProtocol {
     func navigate(to route: MapRoute)
@@ -41,3 +29,5 @@ protocol MapRouterProtocol {
 enum MapRoute {
     case goOnMap(data: MapInfoModel)
 }
+
+// Network kullanılmadığı için kod kalabalığı yapmaması adına Interactor class'ı eklenmemiştir.

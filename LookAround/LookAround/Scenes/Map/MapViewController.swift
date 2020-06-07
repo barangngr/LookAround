@@ -15,6 +15,7 @@ class MapViewController: UIViewController {
     var presenter: MapPresenter!
     var data: MapInfoModel!
     let locationManager = CLLocationManager()
+    var myLocation = CLLocation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,12 +82,17 @@ extension MapViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.first else { return}
-        mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
+        guard let location = locations.first else { return }
+        myLocation = CLLocation(latitude: (location.coordinate.latitude), longitude: (location.coordinate.longitude))
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print(error)
+    }
+    
+    func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
+        mapView.camera = GMSCameraPosition(target: myLocation.coordinate, zoom: 10, bearing: 0, viewingAngle: 0)
+        return true
     }
     
 }

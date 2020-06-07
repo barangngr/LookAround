@@ -21,3 +21,5 @@ protocol DetailPresenterProtocol {
 enum DetailPresenterOutPut {
     case showDetails(data: [DetailInfoModel])
 }
+
+// Network ve sayfa geçişleri kullanılmadığı için kod kalabalığı yapmaması adına Interactor ve router class'ları eklenmemiştir.
