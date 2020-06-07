@@ -39,6 +39,10 @@
 		52CC13BB248BBC6700D7D523 /* DetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC13BA248BBC6700D7D523 /* DetailBuilder.swift */; };
 		52CC13BD248BBCA700D7D523 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC13BC248BBCA700D7D523 /* DetailViewController.swift */; };
 		52CC13C1248BD41D00D7D523 /* MapInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC13C0248BD41D00D7D523 /* MapInfoModel.swift */; };
+		52CC13C4248CF3F800D7D523 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC13C3248CF3F800D7D523 /* DetailTableViewCell.swift */; };
+		52CC13C6248CF78500D7D523 /* DetailInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC13C5248CF78500D7D523 /* DetailInfoModel.swift */; };
+		52CC13C8248CF89E00D7D523 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC13C7248CF89E00D7D523 /* DetailPresenter.swift */; };
+		52CC13CA248CF96D00D7D523 /* DetailContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CC13C9248CF96D00D7D523 /* DetailContracts.swift */; };
 		79BDBD5F208C5E74EF5E1CB9 /* Pods_LookAround.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17158A745D49F5871FA7F2B4 /* Pods_LookAround.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +95,10 @@
 		52CC13BA248BBC6700D7D523 /* DetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBuilder.swift; sourceTree = "<group>"; };
 		52CC13BC248BBCA700D7D523 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		52CC13C0248BD41D00D7D523 /* MapInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapInfoModel.swift; sourceTree = "<group>"; };
+		52CC13C3248CF3F800D7D523 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
+		52CC13C5248CF78500D7D523 /* DetailInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoModel.swift; sourceTree = "<group>"; };
+		52CC13C7248CF89E00D7D523 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		52CC13C9248CF96D00D7D523 /* DetailContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContracts.swift; sourceTree = "<group>"; };
 		9940A459FDED3DD7BA488979 /* Pods_LookAroundTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LookAroundTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C7950111FEAB7EAAA2B8FB0 /* Pods-LookAroundTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LookAroundTests.debug.xcconfig"; path = "Target Support Files/Pods-LookAroundTests/Pods-LookAroundTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C5A4CD766295B92D018FC0D7 /* Pods-LookAroundTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LookAroundTests.release.xcconfig"; path = "Target Support Files/Pods-LookAroundTests/Pods-LookAroundTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -189,7 +197,10 @@
 		52CC1383248A765A00D7D523 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				52CC13C2248CF3D200D7D523 /* TableViewCell */,
+				52CC13C9248CF96D00D7D523 /* DetailContracts.swift */,
 				52CC13BC248BBCA700D7D523 /* DetailViewController.swift */,
+				52CC13C7248CF89E00D7D523 /* DetailPresenter.swift */,
 				52CC13BA248BBC6700D7D523 /* DetailBuilder.swift */,
 			);
 			path = Detail;
@@ -259,6 +270,7 @@
 				52CC13A3248AB69000D7D523 /* ResultsResponse.swift */,
 				52CC13A1248AB63200D7D523 /* GeometryResponse.swift */,
 				52CC13C0248BD41D00D7D523 /* MapInfoModel.swift */,
+				52CC13C5248CF78500D7D523 /* DetailInfoModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -267,6 +279,14 @@
 			isa = PBXGroup;
 			children = (
 				52CC13A8248AC0CD00D7D523 /* TableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		52CC13C2248CF3D200D7D523 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				52CC13C3248CF3F800D7D523 /* DetailTableViewCell.swift */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -476,6 +496,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52CC13C6248CF78500D7D523 /* DetailInfoModel.swift in Sources */,
+				52CC13C4248CF3F800D7D523 /* DetailTableViewCell.swift in Sources */,
 				52CC13A6248ABD6900D7D523 /* UITableViewFactorcy.swift in Sources */,
 				52CC138F248A7E4000D7D523 /* SearchInteractor.swift in Sources */,
 				52CC1394248A813200D7D523 /* UINavigationControllerFactory.swift in Sources */,
@@ -494,7 +516,9 @@
 				52CC13B9248AE30100D7D523 /* MapContracts.swift in Sources */,
 				52CC1397248A838600D7D523 /* UIColor.swift in Sources */,
 				52CC13AD248ACC8E00D7D523 /* UITableView.swift in Sources */,
+				52CC13CA248CF96D00D7D523 /* DetailContracts.swift in Sources */,
 				52CC13A4248AB69000D7D523 /* ResultsResponse.swift in Sources */,
+				52CC13C8248CF89E00D7D523 /* DetailPresenter.swift in Sources */,
 				52CC13C1248BD41D00D7D523 /* MapInfoModel.swift in Sources */,
 				52CC13B1248AE1C500D7D523 /* MapViewController.swift in Sources */,
 				52CC139D248A92CC00D7D523 /* WebService.swift in Sources */,

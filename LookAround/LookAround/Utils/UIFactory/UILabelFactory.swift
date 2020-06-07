@@ -15,6 +15,8 @@ class UILabelFactory {
     enum Style {
         case cellHeader
         case cellDescription
+        case detailHeader
+        case detailDescription
     }
     
     init(style: Style) {
@@ -23,6 +25,8 @@ class UILabelFactory {
         switch style {
         case .cellHeader: cellHeaderStyle()
         case .cellDescription: cellDescpStyle()
+        case .detailHeader: detailHeaderStyle()
+        case .detailDescription: detailDescpStyle()
         }
     }
     
@@ -40,6 +44,18 @@ class UILabelFactory {
         label.textColor = .gray
         label.font = label.font.withSize(13)
         label.numberOfLines = 0
+    }
+    
+    private func detailDescpStyle() {
+        label.textColor = .white
+        label.font = label.font.withSize(15)
+        label.numberOfLines = 0
+    }
+    
+    private func detailHeaderStyle() {
+        label.textColor = .gray
+        label.font = label.font.withSize(13)
+        label.numberOfLines = 1
     }
     
 }

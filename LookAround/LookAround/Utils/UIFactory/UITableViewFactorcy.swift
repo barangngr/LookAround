@@ -14,6 +14,7 @@ class UITableViewFactorcy {
     
     enum Style {
         case base
+        case detail
     }
     
     init(style: Style) {
@@ -21,6 +22,7 @@ class UITableViewFactorcy {
         
         switch style {
         case .base: baseStyle()
+        case .detail: detailStyle()
         }
     }
     
@@ -32,6 +34,13 @@ class UITableViewFactorcy {
         tableView.separatorStyle = .none
         tableView.backgroundColor = .cusBlack
         tableView.tintColor = .red
+    }
+    
+    private func detailStyle() {
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = .cusGray
+        tableView.tintColor = .red
+        tableView.isScrollEnabled = false
     }
     
 }

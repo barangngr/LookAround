@@ -13,8 +13,10 @@ class DetailBuilder {
     static func make(data: MapInfoModel) -> DetailViewController {
         
         let view = DetailViewController()
+        let presenter = DetailPresenter(view: view)
                 
         view.data = data
+        view.presenter = presenter
         
         return view
     }

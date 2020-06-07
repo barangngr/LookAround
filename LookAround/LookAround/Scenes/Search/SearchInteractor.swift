@@ -19,6 +19,7 @@ class SearchInteractor: SearchInteractorProtocol {
             case .success(let response):
                 let jsonDict = try? JSONSerialization.jsonObject(with: response.data, options: .mutableContainers)
                 
+                //Burada response codable bir model'e atansaydı daha sağlıklı olurdu farkındayım, response'u modelleyemediğim için fazla zaman kaybetmemek adına dictionary yapısını kullanarak data'yı kullandım.
                 if let dict = jsonDict as? Dictionary<String,AnyObject> {
                    
                     if let result = dict["results"] as? [Dictionary<String,AnyObject>] {

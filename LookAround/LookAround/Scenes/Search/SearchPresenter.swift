@@ -67,6 +67,7 @@ extension SearchPresenter: SearchPresenterProtocol {
         
 }
 
+// MARK: SearchInteractorDelegate
 extension SearchPresenter: SearchInteractorDelegate {
     
     func handleOutput(_ output: SearchInteractorOutput) {

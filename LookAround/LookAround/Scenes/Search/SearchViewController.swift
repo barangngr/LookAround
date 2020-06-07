@@ -65,6 +65,10 @@ extension SearchViewController: UITableViewDelegate {
         presenter.goMap(selected: selected)
     }
     
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        searchBar.searchTextField.resignFirstResponder()
+    }
+    
 }
 
 // MARK: - TableViewDataSource
