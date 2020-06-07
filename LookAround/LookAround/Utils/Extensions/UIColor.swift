@@ -16,6 +16,6 @@ extension UIColor {
     
     class var cusGray: UIColor {
         UIColor(red: 41/255, green: 41/255, blue: 45/255, alpha: 1)
-       }
+    }
     
 }

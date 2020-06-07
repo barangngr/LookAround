@@ -69,7 +69,7 @@ extension DetailViewController: UITableViewDataSource {
     
 }
 
-// MARK: SearchViewProtocol
+// MARK: DetailViewProtocol
 extension DetailViewController: DetailViewProtocol {
     
     func handleOutput(_ output: DetailPresenterOutPut) {

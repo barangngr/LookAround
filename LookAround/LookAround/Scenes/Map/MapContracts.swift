@@ -14,7 +14,7 @@ protocol MapViewProtocol: class {
 }
 
 // MARK: - Presenter
-protocol MapPresenterProtocol {
+protocol MapPresenterProtocol: class {
     func goDetail(data: MapInfoModel)
 }
 
@@ -22,7 +22,7 @@ enum MapPresenterOutPut {
 }
 
 // MARK: - Router
-protocol MapRouterProtocol {
+protocol MapRouterProtocol: class {
     func navigate(to route: MapRoute)
 }
 

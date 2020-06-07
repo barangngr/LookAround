@@ -55,5 +55,4 @@ class TableViewCell: UITableViewCell {
         descrpLabel.text = data.adress
     }
     
-    
 }

@@ -49,10 +49,9 @@ class DetailTableViewCell: UITableViewCell {
         }
     }
     
-    func setCell(data: DetailInfoModel){
+    func setCell(data: DetailInfoModel) {
         headerLabel.text = data.header
         descrpLabel.text = data.descp
     }
-    
     
 }

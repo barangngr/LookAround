@@ -14,7 +14,7 @@ protocol DetailViewProtocol: class {
 }
 
 // MARK: - Presenter
-protocol DetailPresenterProtocol {
+protocol DetailPresenterProtocol: class {
     func setData(data: MapInfoModel)
 }
 

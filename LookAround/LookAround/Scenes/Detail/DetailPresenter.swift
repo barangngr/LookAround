@@ -11,7 +11,7 @@ import UIKit
 class DetailPresenter {
     
     private weak var view: DetailViewProtocol?
-    private let headerData = ["Name:","Adress:","Latitude:","Longitude:","Rating:","Open:"]
+    private let headerData = ["Name:", "Adress:", "Latitude:", "Longitude:", "Rating:", "Open:"]
     
     init(view: DetailViewProtocol) {
         self.view = view
@@ -33,6 +33,7 @@ class DetailPresenter {
     
 }
 
+// MARK: DetailPresenterProtocol
 extension DetailPresenter: DetailPresenterProtocol {
 
     func setData(data: MapInfoModel) {

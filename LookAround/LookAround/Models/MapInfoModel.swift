@@ -9,6 +9,7 @@
 import UIKit
 
 struct MapInfoModel {
+    
     let lat: Double
     let lng: Double
     let name: String
@@ -16,4 +17,5 @@ struct MapInfoModel {
     let rating: Double
     let png: String
     let isOpen: Bool
+    
 }

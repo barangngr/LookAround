@@ -9,6 +9,8 @@
 import Foundation
 
 struct DetailInfoModel {
+    
     let header: String
     let descp: String
+    
 }
