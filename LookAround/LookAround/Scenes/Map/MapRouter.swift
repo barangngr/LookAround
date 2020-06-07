@@ -23,8 +23,8 @@ extension MapRouter: MapRouterProtocol {
     
     func navigate(to route: MapRoute) {
         switch route {
-        case .goOnMap:
-            let detailView = DetailViewController()
+        case .goOnMap(let data):
+            let detailView = DetailBuilder.make(data: data)
             viewController.navigationController?.pushViewController(detailView, animated: true)
         }
     }

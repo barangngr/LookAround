@@ -64,7 +64,7 @@ extension MapViewController: MapViewProtocol {
 extension MapViewController: GMSMapViewDelegate {
     
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
-        presenter.goDetail()
+        presenter.goDetail(data: data)
     }
     
 }
@@ -81,8 +81,8 @@ extension MapViewController: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        //guard let location = locations.first else { return}
-        //mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
+        guard let location = locations.first else { return}
+        mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {

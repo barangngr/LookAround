@@ -15,7 +15,7 @@ protocol MapViewProtocol: class {
 
 // MARK: - Presenter
 protocol MapPresenterProtocol {
-    func goDetail()
+    func goDetail(data: MapInfoModel)
 }
 
 enum MapPresenterOutPut {
@@ -39,5 +39,5 @@ protocol MapRouterProtocol {
 }
 
 enum MapRoute {
-    case goOnMap
+    case goOnMap(data: MapInfoModel)
 }

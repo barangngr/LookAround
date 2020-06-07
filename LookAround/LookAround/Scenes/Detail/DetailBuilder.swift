@@ -8,17 +8,15 @@
 
 import UIKit
 
-//class DetailBuilder {
-//    
-//    static func make() -> DetailViewController {
-//        
-//        let view = DetailViewController()
-//        
-//        let presenter = DetailPresenter(view: view)
-//        
-//        view.presenter = presenter
-//        
-//        return view
-//    }
-//    
-//}
+class DetailBuilder {
+    
+    static func make(data: MapInfoModel) -> DetailViewController {
+        
+        let view = DetailViewController()
+                
+        view.data = data
+        
+        return view
+    }
+    
+}

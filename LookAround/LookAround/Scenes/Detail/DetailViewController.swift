@@ -10,6 +10,8 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    var data: MapInfoModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBlue
